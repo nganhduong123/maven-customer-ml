@@ -1,0 +1,9 @@
+metric,value
+Naive baseline (recency only),0.6542903616468909
+Logistic Regression,0.7188721930014597
+Random Forest,0.7195673946010448
+base_rate_test,0.5494608532583216
+precision@0.5,0.7287234042553191
+recall@0.5,0.5844709897610921
+top_decile_hit_rate,0.9624413145539906
+top_decile_lift,1.7516103446618276

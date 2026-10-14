@@ -1,0 +1,32 @@
+[data] 269,720 transaction rows | 8,842 customers
+[split] history: up to 1998-10-01 | prediction window: 90 days to 1998-12-30
+[label] 8,529 customers with history | repeat rate = 55.0%
+[segments] silhouette by k: {3: 0.359, 4: 0.36, 5: 0.335, 6: 0.33} -> k = 4
+
+=== Segment profile ===
+                                  customers  avg_recency_days  avg_frequency  avg_monetary  repeat_rate  share_of_customers
+segment                                                                                                                    
+Champions (C1)                         1613            26.903         15.314       492.523        0.890               0.189
+At-risk (previously active) (C2)       3117           148.660          4.415       127.229        0.520               0.365
+Recent, lighter buyers (C3)            1507            20.849          4.173       118.798        0.558               0.177
+Dormant (C0)                           2292           252.254          1.425        30.382        0.344               0.269
+
+=== Repeat-purchase model (held-out 25% of customers) ===
+  ROC-AUC  Naive baseline (recency only)    0.654
+  ROC-AUC  Logistic Regression              0.719
+  ROC-AUC  Random Forest                    0.720
+  Base repeat rate (test)          54.9%
+  Random Forest precision / recall 0.73 / 0.58 (threshold 0.5)
+  Top-10% scored customers: hit rate 96.2% = 1.75x lift over random
+
+  Feature importance (permutation, ROC-AUC drop):
+monetary               0.0320
+tenure_days            0.0267
+frequency              0.0155
+n_products             0.0043
+avg_spend_per_visit    0.0006
+n_stores              -0.0003
+visits_last_90d       -0.0007
+recency_days          -0.0007
+
+Saved tables and charts to: /tmp/maven_out

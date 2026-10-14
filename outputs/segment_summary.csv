@@ -1,0 +1,5 @@
+segment,customers,avg_recency_days,avg_frequency,avg_monetary,repeat_rate,share_of_customers
+At-risk (previously active) (C2),3117,148.66,4.415,127.229,0.52,0.365
+Champions (C1),1613,26.903,15.314,492.523,0.89,0.189
+Dormant (C0),2292,252.254,1.425,30.382,0.344,0.269
+"Recent, lighter buyers (C3)",1507,20.849,4.173,118.798,0.558,0.177
